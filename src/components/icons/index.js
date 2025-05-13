@@ -1,3 +1,3 @@
-export { AddIcon } from './icons/AddIcon';
-export { AddListIcon } from './icons/AddListIcon';
-export { AddSongIcon } from './icons/AddSongIcon';
+export { Add } from './icons/Add';
+export { AddList } from './icons/AddList';
+export { AddSong } from './icons/AddSong';

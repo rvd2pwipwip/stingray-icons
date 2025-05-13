@@ -1,9 +1,9 @@
 import React from 'react';
-import { AddIcon, AddListIcon, AddSongIcon } from '../components/icons';
+import { Add, AddList, AddSong } from '../components/icons';
 
 export default {
   title: 'Icons/Icon Gallery',
-  component: AddIcon,
+  component: Add,
   parameters: {
     layout: 'padded',
     docs: {
@@ -26,14 +26,14 @@ export default {
   },
 };
 
-// Create an array of icon components instead of using Object.entries
+// Create an array of icon components
 const iconComponents = [
-  { name: 'AddIcon', component: AddIcon },
-  { name: 'AddListIcon', component: AddListIcon },
-  { name: 'AddSongIcon', component: AddSongIcon },
+  { name: 'Add', component: Add },
+  { name: 'AddList', component: AddList },
+  { name: 'AddSong', component: AddSong },
 ];
 
-const IconGrid = ({ icons, size, color }) => (
+const IconGrid = ({ icons, size, color, isDarkMode = false }) => (
   <div style={{
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
@@ -48,16 +48,16 @@ const IconGrid = ({ icons, size, color }) => (
           flexDirection: 'column',
           alignItems: 'center',
           padding: '16px',
-          border: '1px solid #eee',
+          border: `1px solid ${isDarkMode ? '#444' : '#eee'}`,
           borderRadius: '8px',
-          backgroundColor: 'white',
+          backgroundColor: isDarkMode ? '#2a2a2a' : 'white',
         }}
       >
         <Icon size={size} color={color} />
         <span style={{ 
           marginTop: '12px', 
           fontSize: '12px',
-          color: '#666',
+          color: isDarkMode ? '#999' : '#666',
           textAlign: 'center',
         }}>
           {name}
@@ -84,7 +84,7 @@ export const DarkMode = {
   },
   render: (args) => (
     <div style={{ backgroundColor: '#1a1a1a', padding: '20px', borderRadius: '8px' }}>
-      <IconGrid icons={iconComponents} {...args} />
+      <IconGrid icons={iconComponents} {...args} isDarkMode={true} />
     </div>
   ),
 };
@@ -97,7 +97,7 @@ export const SizeVariations = {
       <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
         {[16, 24, 32, 48].map((size) => (
           <div key={size} style={{ textAlign: 'center' }}>
-            <AddIcon size={size} />
+            <Add size={size} />
             <div style={{ marginTop: '8px', fontSize: '12px', color: '#666' }}>
               {size}px
             </div>

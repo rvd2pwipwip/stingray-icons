@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const AddSongIcon = ({ size = 24, color = 'currentColor', ...props }) => (
+export const AddSong = ({ size = 24, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
     <svg
       width={size}
