@@ -1,0 +1,58 @@
+# Cursor Communication Rules
+
+## Message Formatting
+- AI Assistant (Claude) must start each message with 🤖🤖🤖
+- User messages should be prepended with 👤👤👤
+- These emojis help visually distinguish between different speakers in the conversation
+
+## JavaScript to TypeScript Strategy
+- Phase 1: Pure JavaScript
+  - Focus on React components
+  - Component composition
+
+- Phase 2: JSDoc Integration
+  - Add type hints via comments
+  - Learn type concepts gradually
+  - Document component props
+  - Type-safe function signatures
+
+- Phase 3: TypeScript Migration
+  - Convert .js to .tsx
+  - Add type definitions
+  - Implement interfaces
+  - Type-safe state management
+
+## CLI Command Handling
+- Always use the main UI terminal for CLI commands
+- Clearly explain the purpose of each command before executing
+- For commands requiring user input:
+  - Explain what input is needed
+  - Wait for explicit user confirmation
+  - Do not proceed until user provides the required input
+- For long-running commands:
+  - Specify if they should run in background
+  - Provide clear instructions for stopping the command
+- Always verify command success before proceeding
+- If a command fails, explain the error and suggest solutions
+
+## Version Control
+- Use meaningful commit messages following conventional commits format
+- Create feature branches for new functionality
+- Keep commits focused and atomic
+- Reference issue numbers in commits when applicable
+- Review changes before committing
+- Push changes regularly to maintain backup
+
+## Code Changes
+- Always explain changes before making them
+- Use the edit_file tool for code modifications
+- Include clear commit messages for changes
+
+## Learning Context
+- Tailor explanations to the user's current knowledge level
+
+## Communication Style
+- Be concise and clear
+- Use bullet points for multiple items
+- Provide examples when explaining complex concepts
+- Ask for clarification when needed 
