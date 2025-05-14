@@ -19,7 +19,8 @@ stingray-icons/
 ├── .storybook/               # Storybook config
 ├── package.json
 ├── vite.config.js
-├── scripts/generate-icon-index.js # (Automation script)
+├── scripts/generate-icon-index.cjs # (Automation script, run by pre-commit hook)
+├── scripts/svg-to-react-icons.cjs  # (SVG to React component conversion)
 └── ...
 ```
 
@@ -46,7 +47,7 @@ Follow these steps to add a new icon to the library:
      ```
    - This triggers the pre-commit hook, which will:
      - Clean up all SVGs (replace `fill='black'` with `fill='currentColor'`, remove `width`/`height` attributes)
-     - Update the icon export index
+     - Automatically update the icon export index (`src/components/icons/index.js`)
 
 3. **Generate the React component(s):**
    - Run the automated script to convert all SVGs to React components:
@@ -63,7 +64,7 @@ Follow these steps to add a new icon to the library:
      ```
 
 **Note:**
-- You do not need to manually run the SVG cleanup scripts; they are run automatically by the pre-commit hook when you commit SVGs.
+- You do not need to manually run the SVG cleanup scripts or the export index script; they are run automatically by the pre-commit hook when you commit SVGs.
 - After running the conversion script, check the generated files to ensure they match your expectations.
 
 ## 🖼️ Using Icons
@@ -103,11 +104,12 @@ Follow these steps to add a new icon to the library:
 
 ## 🛠️ Automation
 
-- After adding new icon components, always run:
+- The export index (`src/components/icons/index.js`) is automatically updated by the pre-commit hook when you commit SVGs.
+- To generate React components from SVGs, run:
   ```sh
-  node scripts/generate-icon-index.js
+  node scripts/svg-to-react-icons.cjs
   ```
-- This keeps the icon exports up to date.
+- You do not need to run any other scripts manually.
 
 ---
 

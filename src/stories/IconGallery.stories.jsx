@@ -1,9 +1,8 @@
 import React from 'react';
-import { Add, AddList, AddSong, AirPlay } from '../components/icons';
+import * as Icons from '../components/icons';
 
 export default {
   title: 'Icons/Icon Gallery',
-  component: Add,
   parameters: {
     layout: 'padded',
     docs: {
@@ -26,13 +25,11 @@ export default {
   },
 };
 
-// Create an array of icon components
-const iconComponents = [
-  { name: 'Add', component: Add },
-  { name: 'AddList', component: AddList },
-  { name: 'AddSong', component: AddSong },
-  { name: 'AirPlay', component: AirPlay },
-];
+// Dynamically build the icon gallery from all named exports
+const iconComponents = Object.entries(Icons).map(([name, component]) => ({
+  name,
+  component,
+}));
 
 const IconGrid = ({ icons, size, color, isDarkMode = false }) => (
   <div style={{
@@ -49,14 +46,14 @@ const IconGrid = ({ icons, size, color, isDarkMode = false }) => (
           flexDirection: 'column',
           alignItems: 'center',
           padding: '16px',
-          border: `1px solid ${isDarkMode ? '#444' : '#eee'}`,
+          border: `1px solid #eee`,
           borderRadius: '8px',
           backgroundColor: isDarkMode ? '#2a2a2a' : 'white',
         }}
       >
         <Icon size={size} color={color} />
-        <span style={{ 
-          marginTop: '12px', 
+        <span style={{
+          marginTop: '12px',
           fontSize: '12px',
           color: isDarkMode ? '#999' : '#666',
           textAlign: 'center',
@@ -68,7 +65,6 @@ const IconGrid = ({ icons, size, color, isDarkMode = false }) => (
   </div>
 );
 
-// Default gallery with all icons
 export const Gallery = {
   args: {
     size: 32,
@@ -77,7 +73,6 @@ export const Gallery = {
   render: (args) => <IconGrid icons={iconComponents} {...args} />,
 };
 
-// Dark mode example
 export const DarkMode = {
   args: {
     size: 32,
@@ -90,18 +85,18 @@ export const DarkMode = {
   ),
 };
 
-// Size variations
 export const SizeVariations = {
   render: () => (
     <div style={{ padding: '20px' }}>
       <h3 style={{ marginBottom: '16px' }}>Size Variations</h3>
       <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-        {[16, 24, 32, 48].map((size) => (
-          <div key={size} style={{ textAlign: 'center' }}>
-            <Add size={size} />
-            <div style={{ marginTop: '8px', fontSize: '12px', color: '#666' }}>
-              {size}px
-            </div>
+        {iconComponents.map(({ name, component: Icon }) => (
+          <div key={name} style={{ textAlign: 'center' }}>
+            <Icon size={16} />
+            <Icon size={24} />
+            <Icon size={32} />
+            <Icon size={48} />
+            <div style={{ marginTop: '8px', fontSize: '12px', color: '#666' }}>{name}</div>
           </div>
         ))}
       </div>
