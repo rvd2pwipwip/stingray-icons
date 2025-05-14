@@ -1,5 +1,5 @@
 import React from 'react';
-import { Add, AddList, AddSong } from '../components/icons';
+import { Add, AddList, AddSong, AirPlay } from '../components/icons';
 
 export default {
   title: 'Icons/Icon Gallery',
@@ -31,6 +31,7 @@ const iconComponents = [
   { name: 'Add', component: Add },
   { name: 'AddList', component: AddList },
   { name: 'AddSong', component: AddSong },
+  { name: 'AirPlay', component: AirPlay },
 ];
 
 const IconGrid = ({ icons, size, color, isDarkMode = false }) => (

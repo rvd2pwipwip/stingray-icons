@@ -33,30 +33,38 @@ npm run storybook     # Start Storybook for icon gallery
 
 ## ➕ Adding a New Icon
 
-1. **Add SVG:**
-   - Place your SVG file in `src/assets/svg/` (e.g., `MyIcon.svg`).
-   - **No need to manually run cleanup scripts!**
-     - When you commit your changes, the following will happen automatically via a pre-commit hook:
-       - All SVGs will be processed to replace `fill='black'` with `fill='currentColor'`.
-       - All SVGs will have `width` and `height` attributes removed.
-       - The icon export index will be regenerated.
-     - Any changes made by these scripts will be staged and included in your commit.
-2. **Create React Component:**
-   - Create a new file in `src/components/icons/icons/` (e.g., `MyIcon.jsx`).
-   - Example template:
-     ```jsx
-     import React from 'react';
-     import IconWrapper from '../IconWrapper';
-     const MyIcon = (props) => (
-       <IconWrapper {...props}>
-         {/* Paste your SVG path(s) here */}
-         <path d="..." />
-       </IconWrapper>
-     );
-     export { MyIcon };
+Follow these steps to add a new icon to the library:
+
+1. **Add SVG(s):**
+   - Place your SVG file(s) in `src/assets/svg/` (e.g., `MyIcon.svg`).
+
+2. **Commit the raw SVG(s):**
+   - Stage and commit your new SVG file(s):
+     ```sh
+     git add src/assets/svg/
+     git commit -m "feat(icons): add raw SVG(s) for new icon(s)"
      ```
-3. **Export the Icon:**
-   - Just commit your changes! The export index will be updated automatically by the pre-commit hook.
+   - This triggers the pre-commit hook, which will:
+     - Clean up all SVGs (replace `fill='black'` with `fill='currentColor'`, remove `width`/`height` attributes)
+     - Update the icon export index
+
+3. **Generate the React component(s):**
+   - Run the automated script to convert all SVGs to React components:
+     ```sh
+     node scripts/svg-to-react-icons.cjs
+     ```
+   - This will generate a `.jsx` file for each SVG in `src/components/icons/icons/`, matching the project's conventions (named export, named import for `IconWrapper`, `size` and `color` props, and `{...props}` on the SVG).
+
+4. **Commit the generated React component(s):**
+   - Stage and commit the new/updated `.jsx` files:
+     ```sh
+     git add src/components/icons/icons/
+     git commit -m "feat(icons): generate React components for new icon(s)"
+     ```
+
+**Note:**
+- You do not need to manually run the SVG cleanup scripts; they are run automatically by the pre-commit hook when you commit SVGs.
+- After running the conversion script, check the generated files to ensure they match your expectations.
 
 ## 🖼️ Using Icons
 

@@ -1,3 +1,1 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
 node scripts/replace-fill-black.cjs && node scripts/remove-width-height.cjs && node scripts/generate-icon-index.cjs && git add src/
