@@ -35,16 +35,12 @@ npm run storybook     # Start Storybook for icon gallery
 
 1. **Add SVG:**
    - Place your SVG file in `src/assets/svg/` (e.g., `MyIcon.svg`).
-   - **Run the fill color standardization script:**
-     ```sh
-     node scripts/replace-fill-black.cjs
-     ```
-   - This will automatically replace any `fill='black'` or `fill="black"` with `fill='currentColor'` for themeability.
-   - **Run the width/height removal script:**
-     ```sh
-     node scripts/remove-width-height.cjs
-     ```
-   - This will remove any `width` and `height` attributes for scalable, flexible icons.
+   - **No need to manually run cleanup scripts!**
+     - When you commit your changes, the following will happen automatically via a pre-commit hook:
+       - All SVGs will be processed to replace `fill='black'` with `fill='currentColor'`.
+       - All SVGs will have `width` and `height` attributes removed.
+       - The icon export index will be regenerated.
+     - Any changes made by these scripts will be staged and included in your commit.
 2. **Create React Component:**
    - Create a new file in `src/components/icons/icons/` (e.g., `MyIcon.jsx`).
    - Example template:
@@ -60,11 +56,7 @@ npm run storybook     # Start Storybook for icon gallery
      export { MyIcon };
      ```
 3. **Export the Icon:**
-   - Run the automation script:
-     ```sh
-     node scripts/generate-icon-index.cjs
-     ```
-   - This updates `src/components/icons/index.js` to export all icons.
+   - Just commit your changes! The export index will be updated automatically by the pre-commit hook.
 
 ## 🖼️ Using Icons
 
