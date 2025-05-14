@@ -1,7 +1,15 @@
 {
   "name": "stingray-icons",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "dist/stingray-icons.cjs.js",
+  "module": "dist/stingray-icons.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/stingray-icons.es.js",
+      "require": "./dist/stingray-icons.cjs.js"
+    }
+  },
+  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
