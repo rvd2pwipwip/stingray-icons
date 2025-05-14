@@ -1,6 +1,6 @@
 {
   "name": "stingray-icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/stingray-icons.cjs.js",
   "module": "dist/stingray-icons.es.js",
   "exports": {
