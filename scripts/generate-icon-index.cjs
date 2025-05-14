@@ -1,4 +1,4 @@
-// scripts/generate-icon-index.js
+// scripts/generate-icon-index.cjs
 // Auto-generates src/components/icons/index.js with named exports for all icons
 
 const fs = require('fs');

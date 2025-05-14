@@ -35,6 +35,16 @@ npm run storybook     # Start Storybook for icon gallery
 
 1. **Add SVG:**
    - Place your SVG file in `src/assets/svg/` (e.g., `MyIcon.svg`).
+   - **Run the fill color standardization script:**
+     ```sh
+     node scripts/replace-fill-black.cjs
+     ```
+   - This will automatically replace any `fill='black'` or `fill="black"` with `fill='currentColor'` for themeability.
+   - **Run the width/height removal script:**
+     ```sh
+     node scripts/remove-width-height.cjs
+     ```
+   - This will remove any `width` and `height` attributes for scalable, flexible icons.
 2. **Create React Component:**
    - Create a new file in `src/components/icons/icons/` (e.g., `MyIcon.jsx`).
    - Example template:
@@ -52,7 +62,7 @@ npm run storybook     # Start Storybook for icon gallery
 3. **Export the Icon:**
    - Run the automation script:
      ```sh
-     node scripts/generate-icon-index.js
+     node scripts/generate-icon-index.cjs
      ```
    - This updates `src/components/icons/index.js` to export all icons.
 
