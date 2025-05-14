@@ -1,0 +1,10 @@
+import React from 'react';
+import { IconWrapper } from '../IconWrapper';
+
+export const Headphones = ({ size = 24, color = 'currentColor', ...props }) => (
+  <IconWrapper size={size} color={color} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <path d="M15 0C6.71667 0 0 6.71667 0 15V26.6667C0 28.5 1.5 30 3.33333 30H10V16.6667H3.33333V15C3.33333 8.55 8.55 3.33333 15 3.33333C21.45 3.33333 26.6667 8.55 26.6667 15V16.6667H20V30H26.6667C28.5 30 30 28.5 30 26.6667V15C30 6.71667 23.2833 0 15 0Z" fill="currentColor"/>
+    </svg>
+  </IconWrapper>
+);

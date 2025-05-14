@@ -1,0 +1,10 @@
+import React from 'react';
+import { IconWrapper } from '../IconWrapper';
+
+export const PreviousSlide = ({ size = 24, color = 'currentColor', ...props }) => (
+  <IconWrapper size={size} color={color} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <path d="M15 0C6.75 0 0 6.75 0 15C0 23.25 6.75 30 15 30C23.25 30 30 23.25 30 15C30 6.75 23.25 0 15 0ZM18.3 20.4C18.3 20.4 19.3 21.5 18.3 22.5C17.3 23.5 16.2 22.5 16.2 22.5L8.7 15L16.2 7.5C16.2 7.5 17.3 6.5 18.3 7.5C19.3 8.5 18.3 9.6 18.3 9.6L12.9 15L18.3 20.4Z" fill="currentColor"/>
+    </svg>
+  </IconWrapper>
+);

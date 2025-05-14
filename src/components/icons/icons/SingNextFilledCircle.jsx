@@ -1,0 +1,10 @@
+import React from 'react';
+import { IconWrapper } from '../IconWrapper';
+
+export const SingNextFilledCircle = ({ size = 24, color = 'currentColor', ...props }) => (
+  <IconWrapper size={size} color={color} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <path fillRule="evenodd" clipRule="evenodd" d="M15 0C6.71972 0 0 6.71972 0 15C0 23.2803 6.71972 30 15 30C23.2803 30 30 23.2803 30 15C30 6.71972 23.2803 0 15 0ZM14.319 15.4044C14.5935 15.2047 14.5935 14.7953 14.319 14.5956L8.79409 10.5775C8.4636 10.3372 8 10.5732 8 10.9819V19.0181C8 19.4268 8.4636 19.6628 8.79409 19.4225L14.319 15.4044ZM21.319 15.4044C21.5935 15.2047 21.5935 14.7953 21.319 14.5956L15.7941 10.5775C15.4636 10.3372 15 10.5732 15 10.9819V19.0181C15 19.4268 15.4636 19.6628 15.7941 19.4225L21.319 15.4044Z" fill="currentColor"/>
+    </svg>
+  </IconWrapper>
+);

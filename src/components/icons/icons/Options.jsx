@@ -1,0 +1,10 @@
+import React from 'react';
+import { IconWrapper } from '../IconWrapper';
+
+export const Options = ({ size = 24, color = 'currentColor', ...props }) => (
+  <IconWrapper size={size} color={color} {...props}>
+    <svg viewBox="0 0 6 24" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <path d="M6 21C6 22.65 4.65 24 3 24C1.35 24 0 22.65 0 21C0 19.35 1.35 18 3 18C4.65 18 6 19.35 6 21ZM3 9C1.35 9 0 10.35 0 12C0 13.65 1.35 15 3 15C4.65 15 6 13.65 6 12C6 10.35 4.65 9 3 9ZM3 0C1.35 0 0 1.35 0 3C0 4.65 1.35 6 3 6C4.65 6 6 4.65 6 3C6 1.35 4.65 0 3 0Z" fill="currentColor"/>
+    </svg>
+  </IconWrapper>
+);
