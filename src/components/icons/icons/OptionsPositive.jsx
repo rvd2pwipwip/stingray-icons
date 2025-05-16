@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const OptionsPositive = ({ size = 24, color = 'currentColor', ...props }) => (
+export const OptionsPositive = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M0 15.5C0 6.94364 6.94364 0 15.5 0C24.0564 0 31 6.94364 31 15.5C31 24.0564 24.0564 31 15.5 31C6.94364 31 0 24.0564 0 15.5ZM15.5 2.54098C8.34699 2.54098 2.54098 8.34699 2.54098 15.5C2.54098 22.653 8.34699 28.459 15.5 28.459C22.653 28.459 28.459 22.653 28.459 15.5C28.459 8.34699 22.653 2.54098 15.5 2.54098Z" fill="currentColor"/>
     <path d="M17.5328 8.38525C17.5328 9.50792 16.6227 10.418 15.5 10.418C14.3773 10.418 13.4672 9.50792 13.4672 8.38525C13.4672 7.26257 14.3773 6.35246 15.5 6.35246C16.6227 6.35246 17.5328 7.26257 17.5328 8.38525Z" fill="currentColor"/>
     <path d="M17.5328 22.6148C17.5328 23.7374 16.6227 24.6475 15.5 24.6475C14.3773 24.6475 13.4672 23.7374 13.4672 22.6148C13.4672 21.4921 14.3773 20.582 15.5 20.582C16.6227 20.582 17.5328 21.4921 17.5328 22.6148Z" fill="currentColor"/>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const OptionsSubtract = ({ size = 24, color = 'currentColor', ...props }) => (
+export const OptionsSubtract = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M15 0C6.72 0 0 6.72 0 15C0 23.28 6.72 30 15 30C23.28 30 30 23.28 30 15C30 6.72 23.28 0 15 0ZM15 9.64286C16.1835 9.64286 17.1429 8.68347 17.1429 7.5C17.1429 6.31653 16.1835 5.35714 15 5.35714C13.8165 5.35714 12.8571 6.31653 12.8571 7.5C12.8571 8.68347 13.8165 9.64286 15 9.64286ZM17.1429 22.5C17.1429 23.6835 16.1835 24.6429 15 24.6429C13.8165 24.6429 12.8571 23.6835 12.8571 22.5C12.8571 21.3165 13.8165 20.3571 15 20.3571C16.1835 20.3571 17.1429 21.3165 17.1429 22.5ZM15 17.1429C16.1835 17.1429 17.1429 16.1835 17.1429 15C17.1429 13.8165 16.1835 12.8571 15 12.8571C13.8165 12.8571 12.8571 13.8165 12.8571 15C12.8571 16.1835 13.8165 17.1429 15 17.1429Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

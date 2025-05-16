@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const SingLastCircle = ({ size = 24, color = 'currentColor', ...props }) => (
+export const SingLastCircle = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M9.40164 20.6131C9.40164 21.026 9.86801 21.2665 10.2045 21.0271L17.3905 15.9141C17.6752 15.7115 17.6752 15.2885 17.3905 15.0859L10.2045 9.97287C9.86801 9.73348 9.40164 9.97402 9.40164 10.3869V20.6131ZM19.4849 9.90984C19.4849 9.62917 19.7124 9.40164 19.9931 9.40164H20.6546C20.9352 9.40164 21.1628 9.62917 21.1628 9.90984V21.0902C21.1628 21.3708 20.9352 21.5984 20.6546 21.5984H19.9931C19.7124 21.5984 19.4849 21.3708 19.4849 21.0902V9.90984Z" fill="currentColor"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M0 15.5C0 6.94364 6.94364 0 15.5 0C24.0564 0 31 6.94364 31 15.5C31 24.0564 24.0564 31 15.5 31C6.94364 31 0 24.0564 0 15.5ZM15.5 2.54098C8.34699 2.54098 2.54098 8.34699 2.54098 15.5C2.54098 22.653 8.34699 28.459 15.5 28.459C22.653 28.459 28.459 22.653 28.459 15.5C28.459 8.34699 22.653 2.54098 15.5 2.54098Z" fill="currentColor"/>
     </svg>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const AppsTools = ({ size = 24, color = 'currentColor', ...props }) => (
+export const AppsTools = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M0 0H7V7H0V0Z" fill="currentColor"/>
     <path d="M0 11H7V18H0V11Z" fill="currentColor"/>
     <path d="M0 22H7V29H0V22Z" fill="currentColor"/>

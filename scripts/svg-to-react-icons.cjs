@@ -24,7 +24,7 @@ function generateComponent(name, svgContent) {
   // Add width, height, and {...props} to SVG tag (no color)
   svgContent = svgContent.replace(
     /<svg([^>]*)>/,
-    `<svg$1 width={size} height={size} {...props}>`
+    `<svg$1 width={size || '1em'} height={size || '1em'} {...props}>`
   );
   // Ensure fill="none" is present on SVG tag
   if (!/fill="none"/.test(svgContent)) {
@@ -38,7 +38,7 @@ function generateComponent(name, svgContent) {
   // Replace single quotes for JSX attributes
   svgContent = svgContent.replace(/'([^']*)'/g, '"$1"');
 
-  return `import React from 'react';\nimport { IconWrapper } from '../IconWrapper';\n\nexport const ${name} = ({ size = 24, color = 'currentColor', ...props }) => (\n  <IconWrapper size={size} color={color} {...props}>\n    ${svgContent.trim().replace(/\n/g, '\n    ')}\n  </IconWrapper>\n);\n`;
+  return `import React from 'react';\nimport { IconWrapper } from '../IconWrapper';\n\nexport const ${name} = ({ size, color = 'currentColor', ...props }) => (\n  <IconWrapper size={size} color={color} {...props}>\n    ${svgContent.trim().replace(/\n/g, '\n    ')}\n  </IconWrapper>\n);\n`;
 }
 
 fs.readdirSync(SVG_DIR).forEach(file => {

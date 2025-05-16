@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Bookmarked = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Bookmarked = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M12.3687 26.5043L4.94746 29.6848C3.7695 30.1854 2.65043 30.0897 1.59026 29.3977C0.530085 28.7056 0 27.7264 0 26.4601V3.5339C0 2.56208 0.346028 1.73014 1.03808 1.03808C1.73014 0.346028 2.56208 0 3.5339 0H21.2034C22.1752 0 23.0072 0.346028 23.6992 1.03808C24.3913 1.73014 24.7373 2.56208 24.7373 3.5339V26.4601C24.7373 27.7264 24.2072 28.7056 23.1471 29.3977C22.0869 30.0897 20.9678 30.1854 19.7899 29.6848L12.3687 26.5043Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Target = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Target = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M2.75 18C2.75 9.58164 9.58164 2.75 18 2.75C26.4184 2.75 33.25 9.58164 33.25 18C33.25 26.4184 26.4184 33.25 18 33.25C9.58164 33.25 2.75 26.4184 2.75 18ZM18 5.25C10.9624 5.25 5.25 10.9624 5.25 18C5.25 25.0376 10.9624 30.75 18 30.75C25.0376 30.75 30.75 25.0376 30.75 18C30.75 10.9624 25.0376 5.25 18 5.25Z" fill="currentColor"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M18.25 0C18.9404 0 19.5 0.559644 19.5 1.25V8.75C19.5 9.44036 18.9404 10 18.25 10C17.5596 10 17 9.44036 17 8.75V1.25C17 0.559644 17.5596 0 18.25 0ZM0 18.25C0 17.5596 0.559644 17 1.25 17H8.75C9.44036 17 10 17.5596 10 18.25C10 18.9404 9.44036 19.5 8.75 19.5H1.25C0.559644 19.5 0 18.9404 0 18.25ZM26 18.25C26 17.5596 26.5596 17 27.25 17H34.75C35.4404 17 36 17.5596 36 18.25C36 18.9404 35.4404 19.5 34.75 19.5H27.25C26.5596 19.5 26 18.9404 26 18.25ZM18.25 26C18.9404 26 19.5 26.5596 19.5 27.25V34.75C19.5 35.4404 18.9404 36 18.25 36C17.5596 36 17 35.4404 17 34.75V27.25C17 26.5596 17.5596 26 18.25 26Z" fill="currentColor"/>
     <path d="M21 18C21 19.6569 19.6569 21 18 21C16.3431 21 15 19.6569 15 18C15 16.3431 16.3431 15 18 15C19.6569 15 21 16.3431 21 18Z" fill="currentColor"/>

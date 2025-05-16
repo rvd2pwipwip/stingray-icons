@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const MsgTemplate = ({ size = 24, color = 'currentColor', ...props }) => (
+export const MsgTemplate = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M26.6667 0H3.33333C1.5 0 0 1.5 0 3.33333V26.6667C0 28.5 1.5 30 3.33333 30H26.6667C28.5 30 30 28.5 30 26.6667V3.33333C30 1.5 28.5 0 26.6667 0ZM18.3333 22.3333C18.3333 22.8856 17.8856 23.3333 17.3333 23.3333H7.66667C7.11438 23.3333 6.66667 22.8856 6.66667 22.3333V21C6.66667 20.4477 7.11438 20 7.66667 20H17.3333C17.8856 20 18.3333 20.4477 18.3333 21V22.3333ZM23.3333 15.6667C23.3333 16.219 22.8856 16.6667 22.3333 16.6667H7.66667C7.11438 16.6667 6.66667 16.219 6.66667 15.6667V14.3333C6.66667 13.781 7.11438 13.3333 7.66667 13.3333H22.3333C22.8856 13.3333 23.3333 13.781 23.3333 14.3333V15.6667ZM23.3333 9C23.3333 9.55229 22.8856 10 22.3333 10H7.66667C7.11438 10 6.66667 9.55228 6.66667 9V7.66667C6.66667 7.11438 7.11438 6.66667 7.66667 6.66667H22.3333C22.8856 6.66667 23.3333 7.11438 23.3333 7.66667V9Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

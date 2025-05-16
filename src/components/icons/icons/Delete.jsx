@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Delete = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Delete = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 20 28" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M4.55172 28C2.88276 28 1.51724 26.6 1.51724 24.8889V6.22222H18.4828V24.8889C18.4828 26.6 17.1172 28 15.4483 28H4.55172ZM5 9C4.44772 9 4 9.44771 4 10V23C4 23.5523 4.44772 24 5 24C5.55228 24 6 23.5523 6 23V10C6 9.44772 5.55228 9 5 9ZM9 10C9 9.44771 9.44771 9 10 9C10.5523 9 11 9.44772 11 10V23C11 23.5523 10.5523 24 10 24C9.44771 24 9 23.5523 9 23V10ZM15 9C14.4477 9 14 9.44771 14 10V23C14 23.5523 14.4477 24 15 24C15.5523 24 16 23.5523 16 23V10C16 9.44772 15.5523 9 15 9Z" fill="currentColor"/>
     <path d="M14.6897 1.55556H20V4.66667H0V1.55556H5.31034L6.82759 0H13.1724L14.6897 1.55556Z" fill="currentColor"/>
     </svg>

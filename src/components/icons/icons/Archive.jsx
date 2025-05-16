@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Archive = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Archive = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M2.5 30C1.83333 30 1.25 29.75 0.75 29.25C0.25 28.75 0 28.1667 0 27.5V2.5C0 1.83333 0.25 1.25 0.75 0.75C1.25 0.25 1.83333 0 2.5 0H27.5C28.1667 0 28.75 0.25 29.25 0.75C29.75 1.25 30 1.83333 30 2.5V27.5C30 28.1667 29.75 28.75 29.25 29.25C28.75 29.75 28.1667 30 27.5 30H2.5ZM15 22.7917C16.1389 22.7917 17.1667 22.4653 18.0833 21.8125C19 21.1597 19.7778 20.3333 20.4167 19.3333H27.5V2.5H2.5V19.3333H9.58333C10.2222 20.3333 11 21.1597 11.9167 21.8125C12.8333 22.4653 13.8611 22.7917 15 22.7917ZM15 17.4167L8.625 11.0417L10.4167 9.25L13.75 12.5833V4.70833H16.25V12.5833L19.5833 9.25L21.375 11.0417L15 17.4167Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

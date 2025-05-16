@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const MyStingray = ({ size = 24, color = 'currentColor', ...props }) => (
+export const MyStingray = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M6 3C6 1.34315 7.34315 0 9 0H27C28.6569 0 30 1.34315 30 3V21C30 22.6569 28.6569 24 27 24H9C7.34315 24 6 22.6569 6 21V3ZM18.2377 19.4406C19.4455 16.0393 20.9683 13.9675 21.6795 13.0544C20.0609 10.9435 18.2435 7.42958 17.7814 4L11 9.03419C14.375 11.8963 16.846 15.6433 18.2377 19.4406ZM22.5032 13.7086C22.0351 14.3188 21.2909 15.4441 20.5843 16.7518C19.9136 17.993 19.2921 19.371 18.9696 20.6058L24.4252 15.6166C24.2139 15.442 23.9427 15.2001 23.6554 14.925C23.2808 14.5664 22.866 14.139 22.5032 13.7086ZM25.6333 9.04097C24.6702 9.88968 23.5458 11.0244 22.4706 12.3909C20.8432 10.2798 19.3787 7.24484 18.8716 4.1217L25.6333 9.04097ZM13.9649 13.7086C13.3245 14.4683 12.5149 15.2277 12.0394 15.6275L17.499 20.6078C17.1767 19.3726 16.5548 17.9937 15.8838 16.7518C15.1772 15.4441 14.433 14.3188 13.9649 13.7086Z" fill="currentColor"/>
     <path d="M0 9C0 7.34315 1.34326 6 3 6V25C3 26.1046 3.89551 27 5 27H24C24 28.6569 22.6567 30 21 30H3C1.34326 30 0 28.6569 0 27V9Z" fill="currentColor"/>
     </svg>

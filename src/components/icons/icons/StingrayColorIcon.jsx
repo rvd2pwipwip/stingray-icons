@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const StingrayColorIcon = ({ size = 24, color = 'currentColor', ...props }) => (
+export const StingrayColorIcon = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M1.60771 20.2936C3.13863 19.0517 4.456 17.7208 5.59099 16.3538C10.2773 22.6522 11.9522 27.7016 12.257 30L1.60771 20.2936Z" fill="#0070E0"/>
     <path d="M12.8377 28.1805C12.269 25.9976 10.6685 21.5211 6.30126 15.6727C4.48479 13.2419 2.36597 11.2202 0 9.22022L12.4921 0C12.6409 1.36462 13.6943 8.86402 19.2085 15.8965C15.0357 21.5403 13.4448 25.8243 12.8377 28.1805Z" fill="#0070E0"/>
     <path d="M13.4184 30C13.7207 27.7016 15.3956 22.6522 20.0844 16.3538C21.2218 17.7184 22.5391 19.0493 24.0677 20.2936L13.4184 30Z" fill="#0070E0"/>

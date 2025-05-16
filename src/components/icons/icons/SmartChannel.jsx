@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const SmartChannel = ({ size = 24, color = 'currentColor', ...props }) => (
+export const SmartChannel = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M16.5 3C17.3284 3 18 2.32843 18 1.5C18 0.671573 17.3284 0 16.5 0C15.6716 0 15 0.671573 15 1.5C15 2.32843 15.6716 3 16.5 3Z" fill="currentColor"/>
     <path d="M5.89 7.39C6.71843 7.39 7.39 6.71843 7.39 5.89C7.39 5.06157 6.71843 4.39 5.89 4.39C5.06157 4.39 4.39 5.06157 4.39 5.89C4.39 6.71843 5.06157 7.39 5.89 7.39Z" fill="currentColor"/>
     <path d="M1.5 18C2.32843 18 3 17.3284 3 16.5C3 15.6716 2.32843 15 1.5 15C0.671573 15 0 15.6716 0 16.5C0 17.3284 0.671573 18 1.5 18Z" fill="currentColor"/>

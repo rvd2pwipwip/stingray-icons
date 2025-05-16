@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const SearchMini = ({ size = 24, color = 'currentColor', ...props }) => (
+export const SearchMini = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M28 15C28 7.82429 22.1757 2 15 2C7.82429 2 2 7.82429 2 15C2 22.1757 7.82429 28 15 28C22.1757 28 28 22.1757 28 15ZM30 15C30 23.2803 23.2803 30 15 30C6.71972 30 0 23.2803 0 15C0 6.71972 6.71972 0 15 0C23.2803 0 30 6.71972 30 15Z" fill="currentColor"/>
     <path d="M18.2539 13.833C18.2537 11.1295 16.1486 9 13.627 9C11.1053 9.00002 9.00017 11.1295 9 13.833C9 16.5366 11.1052 18.667 13.627 18.667C16.1487 18.667 18.2539 16.5366 18.2539 13.833ZM20.2539 13.833C20.2539 15.4851 19.6802 17.0103 18.7227 18.1992L21.7197 21.3057C22.1031 21.7031 22.0918 22.3363 21.6943 22.7197C21.2969 23.1031 20.6637 23.0918 20.2803 22.6943L17.251 19.5537C16.213 20.255 14.971 20.667 13.627 20.667C9.93335 20.667 7 17.5727 7 13.833C7.00017 10.0935 9.93345 7.00002 13.627 7C17.3205 7 20.2537 10.0935 20.2539 13.833Z" fill="currentColor"/>
     </svg>

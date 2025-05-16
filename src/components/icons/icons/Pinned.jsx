@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Pinned = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Pinned = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M0 30.9999H2.07951L8.526 24.5535L13.5168 29.5443C13.5168 29.5443 14.3486 30.584 15.3884 30.3761C16.6361 30.3761 17.4679 29.3363 17.4679 27.6727C17.26 25.8012 17.26 23.0978 20.1713 20.1865C24.7462 15.6115 25.9939 17.6911 29.1132 16.0275C30.9847 14.9877 31.8165 11.6605 29.945 9.78891L21.211 1.05496C19.3395 -0.816604 16.0122 0.0152013 14.9725 1.88676C13.3089 5.00603 15.3884 6.25374 10.8135 10.8287C7.90215 13.74 5.19878 13.532 3.32722 13.532C1.45566 13.532 0.623854 14.3638 0.623854 15.6115C0.623854 16.6513 1.45566 17.4831 1.45566 17.4831L6.44649 22.4739L0 28.9204V30.9999Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

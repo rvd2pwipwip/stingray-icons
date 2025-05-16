@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const ShoppingCart = ({ size = 24, color = 'currentColor', ...props }) => (
+export const ShoppingCart = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M21.8169 16.4939C22.9415 16.4939 23.9311 15.8791 24.4409 14.9494L29.8089 5.21806C30.3637 4.22843 29.644 2.99889 28.5044 2.99889H6.31266L4.90318 0H0V2.99889H2.99889L8.39688 14.3797L6.37263 18.0383C5.27804 20.0476 6.71751 22.4916 8.99666 22.4916H26.99V19.4928H8.99666L10.646 16.4939H21.8169ZM7.73713 5.99777H25.9554L21.8169 13.495H11.2908L7.73713 5.99777ZM8.99666 23.9911C7.34727 23.9911 6.01277 25.3406 6.01277 26.99C6.01277 28.6394 7.34727 29.9889 8.99666 29.9889C10.646 29.9889 11.9955 28.6394 11.9955 26.99C11.9955 25.3406 10.646 23.9911 8.99666 23.9911ZM23.9911 23.9911C22.3417 23.9911 21.0072 25.3406 21.0072 26.99C21.0072 28.6394 22.3417 29.9889 23.9911 29.9889C25.6405 29.9889 26.99 28.6394 26.99 26.99C26.99 25.3406 25.6405 23.9911 23.9911 23.9911Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

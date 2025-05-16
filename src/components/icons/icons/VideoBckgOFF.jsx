@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const VideoBckgOFF = ({ size = 24, color = 'currentColor', ...props }) => (
+export const VideoBckgOFF = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M33.5101 31.1438L2.8542 0.487859C2.20373 -0.16262 1.15295 -0.16262 0.502473 0.487859C-0.164685 1.13834 -0.164685 2.18911 0.485794 2.83959L3.1711 5.5249V27.4911C3.1711 29.3258 4.67221 30.8269 6.50689 30.8269H28.4731L31.1584 33.5122C31.8089 34.1626 32.8596 34.1626 33.5101 33.5122C34.1606 32.8617 34.1606 31.7942 33.5101 31.1438ZM8.20814 25.8232C7.50763 25.8232 7.12401 25.0226 7.55767 24.4722L11.7107 19.1349C12.0443 18.7179 12.6781 18.7013 13.0117 19.1182L16.5143 23.338L18.4657 20.8195L23.4694 25.8232H8.20814ZM33.1932 26.1067L7.89124 0.804759H29.8574C31.6921 0.804759 33.1932 2.30586 33.1932 4.14055V26.1067Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

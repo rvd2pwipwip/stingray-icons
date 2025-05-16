@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const DownloadCircle = ({ size = 24, color = 'currentColor', ...props }) => (
+export const DownloadCircle = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M28 15C28 7.82429 22.1757 2 15 2C7.82429 2 2 7.82429 2 15C2 22.1757 7.82429 28 15 28C22.1757 28 28 22.1757 28 15ZM30 15C30 23.2803 23.2803 30 15 30C6.71972 30 0 23.2803 0 15C0 6.71972 6.71972 0 15 0C23.2803 0 30 6.71972 30 15Z" fill="currentColor"/>
     <path d="M15.0002 7C15.8285 7.00012 16.5002 7.67165 16.5002 8.5V18.7969L20.0403 15.8477L20.1623 15.7559C20.7926 15.3303 21.6553 15.4433 22.1526 16.04C22.6495 16.6366 22.605 17.5047 22.0735 18.0479L21.9602 18.1523L15.9602 23.1523C15.404 23.6157 14.5965 23.6156 14.0403 23.1523L8.04027 18.1523C7.40391 17.6221 7.31771 16.6765 7.84788 16.04C8.37819 15.4037 9.3238 15.3175 9.96019 15.8477L13.5002 18.7969V8.5C13.5002 7.67157 14.1718 7 15.0002 7Z" fill="currentColor"/>
     </svg>

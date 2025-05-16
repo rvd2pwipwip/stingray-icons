@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const NotificationsActive = ({ size = 24, color = 'currentColor', ...props }) => (
+export const NotificationsActive = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M8.53846 2.43077L6.33846 0.230769C2.64615 3.04615 0.215385 7.38462 0 12.3077H3.07692C3.30769 8.23077 5.4 4.66154 8.53846 2.43077ZM27.6 12.3077H30.6769C30.4462 7.38462 28.0154 3.04615 24.3385 0.230769L22.1538 2.43077C25.2615 4.66154 27.3692 8.23077 27.6 12.3077ZM24.5692 13.0769C24.5692 8.35385 22.0462 4.4 17.6462 3.35385V2.30769C17.6462 1.03077 16.6154 0 15.3385 0C14.0615 0 13.0308 1.03077 13.0308 2.30769V3.35385C8.61539 4.4 6.10769 8.33846 6.10769 13.0769V20.7692L3.03077 23.8462V25.3846H27.6462V23.8462L24.5692 20.7692V13.0769ZM15.3385 30C15.5538 30 15.7538 29.9846 15.9538 29.9385C16.9538 29.7231 17.7692 29.0462 18.1692 28.1231C18.3231 27.7538 18.4 27.3538 18.4 26.9231H12.2462C12.2615 28.6154 13.6308 30 15.3385 30Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

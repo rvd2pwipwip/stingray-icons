@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Clock = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Clock = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M0 15.5C0 6.94364 6.94364 0 15.5 0C24.0564 0 31 6.94364 31 15.5C31 24.0564 24.0564 31 15.5 31C6.94364 31 0 24.0564 0 15.5ZM15.5 2.54098C8.34699 2.54098 2.54098 8.34699 2.54098 15.5C2.54098 22.653 8.34699 28.459 15.5 28.459C22.653 28.459 28.459 22.653 28.459 15.5C28.459 8.34699 22.653 2.54098 15.5 2.54098Z" fill="currentColor"/>
     <path d="M15.7541 8.89344C15.7541 8.19177 15.1853 7.62295 14.4836 7.62295C13.7819 7.62295 13.2131 8.19177 13.2131 8.89344V17.2263L20.4243 21.664C21.0219 22.0317 21.8044 21.8454 22.1722 21.2478C22.5399 20.6502 22.3536 19.8677 21.756 19.4999L15.7541 15.8064V8.89344Z" fill="currentColor"/>
     </svg>

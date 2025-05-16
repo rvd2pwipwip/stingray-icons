@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const Logout = ({ size = 24, color = 'currentColor', ...props }) => (
+export const Logout = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M6.66667 21.6667L9.01667 19.3167L6.38333 16.6667L20 16.6667L20 13.3333L6.38333 13.3333L9.01667 10.7L6.66667 8.33333L1.31134e-06 15L6.66667 21.6667ZM26.6667 26.6667L15 26.6667L15 30L26.6667 30C28.5 30 30 28.5 30 26.6667L30 3.33333C30 1.5 28.5 -1.31134e-07 26.6667 -2.91409e-07L15 -1.31134e-06L15 3.33333L26.6667 3.33333L26.6667 26.6667Z" fill="currentColor"/>
     </svg>
   </IconWrapper>

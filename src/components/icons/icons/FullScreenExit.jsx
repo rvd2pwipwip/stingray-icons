@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const FullScreenExit = ({ size = 24, color = 'currentColor', ...props }) => (
+export const FullScreenExit = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path d="M11.4286 15.2381C12.086 15.2381 12.6264 15.7377 12.6915 16.378L12.6984 16.5079V24.6349C12.6984 25.3362 12.1299 25.9048 11.4286 25.9048C10.7273 25.9048 10.1587 25.3362 10.1587 24.6349V17.7778H1.26984L1.13988 17.7708C0.499634 17.7057 0 17.1654 0 16.5079C0 15.8505 0.499634 15.3101 1.13988 15.245L1.26984 15.2381H11.4286Z" fill="currentColor"/>
     <path d="M30.8601 15.245C31.5004 15.3101 32 15.8505 32 16.5079C32 17.1654 31.5004 17.7057 30.8601 17.7708L30.7302 17.7778H21.8413V24.6349C21.8413 25.3362 21.2727 25.9048 20.5714 25.9048C19.8701 25.9048 19.3016 25.3362 19.3016 24.6349V16.5079L19.3085 16.378C19.3736 15.7377 19.914 15.2381 20.5714 15.2381H30.7302L30.8601 15.245Z" fill="currentColor"/>
     <path d="M11.4286 0C12.1299 0 12.6984 0.568527 12.6984 1.26984V9.39683L12.6915 9.52679C12.6264 10.167 12.086 10.6667 11.4286 10.6667H1.26984C0.568527 10.6667 0 10.0981 0 9.39683C0 8.69551 0.568527 8.12698 1.26984 8.12698H10.1587V1.26984C10.1587 0.568527 10.7273 0 11.4286 0Z" fill="currentColor"/>

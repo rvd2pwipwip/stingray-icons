@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconWrapper } from '../IconWrapper';
 
-export const NowPlaying = ({ size = 24, color = 'currentColor', ...props }) => (
+export const NowPlaying = ({ size, color = 'currentColor', ...props }) => (
   <IconWrapper size={size} color={color} {...props}>
-    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+    <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" width={size || "1em"} height={size || "1em"} {...props}>
     <path fillRule="evenodd" clipRule="evenodd" d="M2 12C3.10457 12 4 12.8954 4 14V26C4 27.1046 3.10457 28 2 28C0.89543 28 0 27.1046 0 26V14C0 12.8954 0.89543 12 2 12Z" fill="currentColor"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M7.5 5C8.60457 5 9.5 5.89543 9.5 7V26C9.5 27.1046 8.60457 28 7.5 28C6.39543 28 5.5 27.1046 5.5 26V7C5.5 5.89543 6.39543 5 7.5 5Z" fill="currentColor"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M13.5 0C14.6046 0 15.5 0.89543 15.5 2V26C15.5 27.1046 14.6046 28 13.5 28C12.3954 28 11.5 27.1046 11.5 26V2C11.5 0.89543 12.3954 0 13.5 0Z" fill="currentColor"/>

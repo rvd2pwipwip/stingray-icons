@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const IconWrapper = ({ size = 24, color = 'currentColor', children, ...props }) => (
+export const IconWrapper = ({ size, color = 'currentColor', children, ...props }) => (
   <div
     style={{
-      width: size,
-      height: size,
+      width: size || 'auto',
+      height: size || 'auto',
       color,
       display: 'inline-flex',
       alignItems: 'center',
