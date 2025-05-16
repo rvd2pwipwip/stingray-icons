@@ -95,13 +95,19 @@ Follow these steps to add a new icon to the library:
 
 ## 📦 Publishing to npm
 
-1. Update `package.json` with your desired name, version, and `main`/`module` fields.
-2. Remove `private: true` if present.
-3. Login to npm:
+1. **Build the library:**
+   ```sh
+   npm run build
+   ```
+   (or `yarn build` if you use Yarn)
+
+2. Update `package.json` with your desired name, version, and `main`/`module` fields.
+3. Remove `private: true` if present.
+4. Login to npm:
    ```sh
    npm login
    ```
-4. Publish:
+5. Publish:
    ```sh
    npm publish --access public
    ```
