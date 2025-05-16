@@ -72,8 +72,19 @@ Follow these steps to add a new icon to the library:
 - **In React:**
   ```jsx
   import { MyIcon } from 'src/components/icons';
+
+  // Set a specific size (in px, em, rem, etc.)
   <MyIcon size={32} color="#333" />
+
+  // Or let the icon scale with the font size of its container
+  <div style={{ fontSize: 40 }}>
+    <MyIcon color="rebeccapurple" />
+  </div>
   ```
+  - If you provide a `size` prop, the icon will use that value for both width and height.
+  - If you omit the `size` prop, the icon will scale with the `font-size` of its parent (default is `1em`).
+  - You can also control the icon size via CSS by setting `font-size` on a parent element.
+
 - **As SVG:**
   - Use the raw SVG from `src/assets/svg/` in any non-React project.
 
